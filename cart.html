@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: black; color: white;">
+  <div class="container mt-5">
+    <h2 style="text-align: center; color: gold; font-weight: 900; margin-bottom: 30px;">Your Cart</h2>
+    <table class="table table-bordered" style="color: white;">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cartItems"></tbody>
+    </table>
+    <div>
+      Total: $<span id="totalAmount">0.00</span>
+    </div>
+    <button class="love" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function displayCart() {
+      const cartItemsContainer = document.getElementById('cartItems');
+      let total = 0;
+      cartItemsContainer.innerHTML = cart.map(item => {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+        return `
+          <tr>
+            <td>${item.productName}</td>
+            <td>$${item.price.toFixed(2)}</td>
+            <td>${item.quantity}</td>
+            <td>$${subtotal.toFixed(2)}</td>
+          </tr>
+        `;
+      }).join('');
+      document.getElementById('totalAmount').innerText = total.toFixed(2);
+    }
+
+    document.addEventListener('DOMContentLoaded', displayCart);
+  </script>
+</body>
+</html>

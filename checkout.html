@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: black; color: white;">
+  <div class="container mt-5">
+    <h2 style="text-align: center; color: gold; font-weight: 900; ">Checkout</h2>
+    <form id="paymentForm" onsubmit="submitPayment(event)">
+      <div class="form-group">
+        <label for="name" style="color: white;">Full Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="cardNumber" style="color: white;">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="expiryDate" style="color: white;">Expiry Date</label>
+          <input type="text" class="form-control" id="expiryDate" required placeholder="MM/YY">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="cvv" style="color: white;">CVV</label>
+          <input type="text" class="form-control" id="cvv" required>
+        </div>
+      </div>
+      <button class="love" >Pay Now</button>
+    </form>
+  </div>
+
+  <script>
+    function submitPayment(event) {
+      event.preventDefault();
+      alert('Payment Successful! Thank you for your purchase.');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

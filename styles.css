@@ -1,0 +1,95 @@
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  
+
+  .love
+  {
+    background-color: gold;
+    color: black;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+    border-color: none;
+    width: 300px;
+    margin-top: 30px;
+    border: none;
+  }
+
+  .love:hover
+  {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transform: scale(1.05);
+  }
+
+
+
+.subscription-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.header {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.subscribe-button {
+    background-color: gold;
+    color: black;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+    border-color: none;
+    width: 300px;
+    margin-top: 30px;
+    border: none;
+}
+.subscribe-button:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.card-title
+{
+    color: black;
+}
+
+.card-text
+{
+    color: black;
+}
